@@ -9,16 +9,12 @@ class link_node():                    # class defining the structure for the nod
         self.data = data
 
 
-<<<<<<< HEAD
-
-=======
 class linked_list():                # class definiing the structure of a linked list
     def __init__(self):     # constructor function
         self.head = None
         self.tail = None
 
     def append(self, key, data):        # append function that adds a key and data as a new node
->>>>>>> origin/master
         print(key)
         if self.head is None:
             new_node = link_node(key, data)
@@ -29,30 +25,19 @@ class linked_list():                # class definiing the structure of a linked 
             self.tail.next = new_node
             self.tail = new_node
 
-<<<<<<< HEAD
-
-=======
     def delete(self, key):              # delete function that searches for a key and removes the node associated with it
->>>>>>> origin/master
         if self.head is not None:
             curr_node = self.head
             prev_node = None
             while curr_node.next is not None:
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
                 if curr_node.key == key:
                     if prev_node is None:
                         self.head = curr_node.next
                     else:
                         prev_node.next = curr_node.next
-<<<<<<< HEAD
-
-=======
 
 
 class custom_hash_table():              # class that defines teh structure of a hash table
->>>>>>> origin/master
     def __init__(self, size):
         self.table = [0] * size
         print(self.table)
@@ -61,26 +46,18 @@ class custom_hash_table():              # class that defines teh structure of a 
         print(self.table)
         self.size = size
 
-<<<<<<< HEAD
-
-=======
     def insert(self, key, value):      # insert function that finds the has value of the key and calls the append function the appropriate linked list
->>>>>>> origin/master
         hash_val = hash(key)
         hash_val = hash_val % self.size
         print(hash_val)
         self.table[hash_val].append(key, value)
 
-<<<<<<< HEAD
-
-=======
     def delete(self, key):          # delete function that find the hash value of the key and calls the delete function of the appropriate linked list
         hash_val = hash(key)
         hash_val = hash_val % self.size
         self.table[hash_val].delete(key)
 
     def print_table(self):          # a function that prints out all of the keys stored in the hash table as well as their positions
->>>>>>> origin/master
         for i in range(0, self.size):
             curr_node = self.table[i].head
             if curr_node is not None:
@@ -91,11 +68,8 @@ class custom_hash_table():              # class that defines teh structure of a 
 
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     # local_root = search_node("mystery")
     # source_text = sys.argv[1]
-=======
->>>>>>> origin/master
     hash1 = custom_hash_table(3)
     hash1.insert("blah", 4)
     hash1.insert("fish", 3)
@@ -105,9 +79,6 @@ if __name__ == '__main__':
     hash1.insert("two", 2)
     hash1.insert("whatever", 1)
     hash1.print_table()
-<<<<<<< HEAD
-=======
     hash1.delete("whatever")
     hash1.delete("red")
     hash1.print_table()
->>>>>>> origin/master
